@@ -18,11 +18,19 @@ def display_fcs(window,x_size,y_size):
 
 def num_changer(e):
     if e.type == pygame.KEYDOWN:
-        print(e.key)
+
         target_num = (57 - e.key - 9) * -1
-        if target_num <= 9 or target_num >=0:
-            map_datas.current_num = target_num
-            print(target_num)
+        if target_num <= 9 or target_num >=1:
+            map_datas.current_num = target_num -1
+        print(target_num)
+
+def fill_the_map(filler):
+    for y in range(len(map_datas.all_tiles)):
+        print("")
+        for x in range(len(map_datas.all_tiles[y])):
+            print(map_datas.all_tiles[x][y],end="")
+
+
 
 
 
