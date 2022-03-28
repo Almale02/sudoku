@@ -1,4 +1,5 @@
 import main_loop_functions.main_fc as funcs_main
+import main_loop_functions.num_check as numcheck
 import pygame
 import user_input.mouse_input as mouse_input
 import time
@@ -7,6 +8,7 @@ import scripts.display.display_fc.draw_nums as draw_nums
 
 def main_looop(window,x_size,y_size):
     funcs_main.fill_the_map("blank")
+    numcheck.check((4,7),1)
 
     while True:
         # get the mouse pos
@@ -23,7 +25,7 @@ def main_looop(window,x_size,y_size):
         # tile input
         mouse_input.tile_input()
         # drawing numbers3
-        print(mouse_pos)
+
         draw_nums.draw_nums(window, mouse_pos)
         # updating the screen
         pygame.display.update()
