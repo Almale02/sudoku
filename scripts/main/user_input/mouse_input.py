@@ -9,9 +9,13 @@ def get_tile_pos(mouse_pos,type):
 
 def tile_input():
     pos = pygame.mouse.get_pos()
-    if pygame.mouse.get_pressed(3)[0]:
+    pos_true = list()
+    pos_true.append(pos[0] // (750 // 9))
+    pos_true.append(pos[1] // (750 // 9))
 
-        map_datas.all_tiles[get_tile_pos(pos,"tile")[0]][get_tile_pos(pos,"tile")[1]] = map_datas.current_num
+    if pygame.mouse.get_pressed(3)[0]:
+        if num_check.check(pos_true,map_datas.current_num):
+            map_datas.all_tiles[get_tile_pos(pos,"tile")[0]][get_tile_pos(pos,"tile")[1]] = map_datas.current_num
 
 
 

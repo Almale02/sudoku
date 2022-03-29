@@ -4,11 +4,12 @@ import pygame
 import user_input.mouse_input as mouse_input
 import time
 import scripts.display.display_fc.draw_nums as draw_nums
+import scripts.main.datas.map_datas as map_datas
 
 
 def main_looop(window,x_size,y_size):
     funcs_main.fill_the_map("blank")
-    numcheck.check((4,7),1)
+
 
     while True:
         # get the mouse pos
